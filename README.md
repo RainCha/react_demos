@@ -144,7 +144,8 @@ devServer: {
 2. 我们现在只是写demo,如果是在做项目，一般都会在编译后，把整个 `dist` 目录上传到服务器，里面应该包含所有静态资源（包括index.html）,所以现在是不合理的
 
 ###### 进行优化
-1. 删除 `index.html` ,使用 webpack 插件进行自动生成 html
+1. 删除 `index.html` ,添加 `template.html`文件 ,使用 webpack 插件根据 `template.html` 进行自动生成 ./dist/index.html
+2. 修改 devServer 的静态资源目录 为 `./dist`
 
 首先，安装插件
 ```bash 
