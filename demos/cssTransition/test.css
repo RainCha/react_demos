@@ -1,0 +1,15 @@
+
+
+.textColor{
+    color: red;
+}
+
+:global(._global) {
+        font-size: 20px;
+        color:black;
+}
+
+.removing-item {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}

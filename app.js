@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import HelloWorld from './demos/helloWorld/HelloWorld';
+import TransitionDemo from './demos/cssTransition/TransitionDemo.js'
 
 ReactDOM.render(
-  <HelloWorld/>,
+  <TransitionDemo/>,
   document.getElementById('root')
 );

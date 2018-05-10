@@ -36,7 +36,32 @@ module.exports = {
             //     presets: ['@babel/preset-env']
             //   }
             }
-          }
+          },
+          {
+            test: /\.css$/,
+            exclude: path.resolve(__dirname, 'global/styles'), // 排除全局样式
+            use: [
+              {
+                loader:'style-loader'
+              },
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,  // 开启css moudle
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  sourceMap:true
+                }
+              },
+              {
+                loader: 'postcss-loader',
+              }
+            ]
+           },
+           {
+            test: /\.css$/,
+            include: path.resolve(__dirname, 'global/styles'), // 只对全局样式生效
+            loader:'style!css!postcss'
+           }
         ]
     }
 }
